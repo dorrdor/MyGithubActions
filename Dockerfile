@@ -5,9 +5,9 @@ FROM node:14-alpine
 #ENV OKTA_CLIENT_SECRET=kQZmw7l9ZDn1e7VF2zhPZrwyA5e3IDeXZDk_an3k
 #ENV COOKIE_ENCRYPT_PWD=superAwesomePasswordStringThatIsAtLeast32CharactersLong!
 #create app directory
-#WORKDIR /home/adminuser/myagent/_work/1/s/
+WORKDIR /app
 
-COPY . .
+COPY . /app/
 
 RUN npm install &&\
     npm audit fix &&\
